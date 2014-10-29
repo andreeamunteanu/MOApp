@@ -7,7 +7,8 @@
     <string name="title_activity_second">Second</string>
     <string name="log_in">Log in</string>
     <string name="cancel">Cancel</string>
-    <string name="name">name</string>
+    <string name="name">name</string><string name="Second">Welcome to MOA!</string>
     <string name="password">password</string>
+    
 
 </resources>

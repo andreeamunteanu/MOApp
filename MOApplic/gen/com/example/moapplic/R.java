@@ -1634,9 +1634,10 @@ containing a value of this type.
         public static final int abc_textfield_search_default_mtrl_alpha=0x7f020031;
         public static final int abc_textfield_search_material=0x7f020032;
         public static final int ic_launcher=0x7f020033;
+        public static final int seanecklace=0x7f020034;
     }
     public static final class id {
-        public static final int Button1=0x7f090045;
+        public static final int Button1=0x7f090044;
         public static final int Button2=0x7f090046;
         public static final int action_bar=0x7f090033;
         public static final int action_bar_activity_content=0x7f090003;
@@ -1663,8 +1664,8 @@ containing a value of this type.
         public static final int dialog=0x7f090019;
         public static final int disableHome=0x7f09000d;
         public static final int dropdown=0x7f09001a;
-        public static final int editText1=0x7f090043;
-        public static final int editText2=0x7f090044;
+        public static final int editText1=0x7f090045;
+        public static final int editText2=0x7f090043;
         public static final int edit_query=0x7f090035;
         public static final int end=0x7f09001c;
         public static final int expand_activities_button=0x7f090024;
@@ -1700,8 +1701,8 @@ containing a value of this type.
         public static final int split_action_bar=0x7f090004;
         public static final int submit_area=0x7f09003e;
         public static final int tabMode=0x7f09000c;
-        public static final int textView1=0x7f090041;
-        public static final int textView2=0x7f090042;
+        public static final int textView1=0x7f090042;
+        public static final int textView2=0x7f090041;
         public static final int title=0x7f090029;
         public static final int top=0x7f09001f;
         public static final int up=0x7f090001;
@@ -1768,6 +1769,7 @@ containing a value of this type.
         public static final int second=0x7f0c0001;
     }
     public static final class string {
+        public static final int Second=0x7f0a0016;
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
          */
         public static final int abc_action_bar_home_description=0x7f0a0001;
@@ -1827,7 +1829,7 @@ containing a value of this type.
         public static final int hello_world=0x7f0a0010;
         public static final int log_in=0x7f0a0013;
         public static final int name=0x7f0a0015;
-        public static final int password=0x7f0a0016;
+        public static final int password=0x7f0a0017;
         public static final int title_activity_second=0x7f0a0012;
     }
     public static final class style {
