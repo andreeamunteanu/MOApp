@@ -1,0 +1,16 @@
+package com.example.moapplic;
+
+public class Database {
+
+	private User[] users;
+
+	public Database() {
+		users= new User[100]; 
+	}
+	
+
+	public User[] getUsers() {
+		return users;
+	}
+	
+}

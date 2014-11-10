@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.moapplic.MainActivity" 
+    tools:context="activities.MainActivity" 
     android:theme="@android:style/Theme.NoTitleBar">
 
     <TextView
@@ -25,24 +25,24 @@
         android:id="@+id/editText2"
         android:layout_width="170dp"
         android:layout_height="40dp"
-        android:layout_above="@+id/Button1"
+        android:layout_above="@+id/loginB"
         android:layout_alignLeft="@+id/editText1"
         android:layout_alignRight="@+id/editText1"
         android:ems="10"
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/Button2"
+        android:id="@+id/signUpB"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/Button1"
-        android:layout_alignBottom="@+id/Button1"
+        android:layout_alignBaseline="@+id/loginB"
+        android:layout_alignBottom="@+id/loginB"
         android:layout_alignRight="@+id/editText2"
         android:layout_marginRight="24dp"
-        android:text="@string/cancel"/>
+        android:text="@string/signUp"/>
 
     <Button
-        android:id="@+id/Button1"
+        android:id="@+id/loginB"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView2"

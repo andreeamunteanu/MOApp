@@ -1637,8 +1637,6 @@ containing a value of this type.
         public static final int seanecklace=0x7f020034;
     }
     public static final class id {
-        public static final int Button1=0x7f090044;
-        public static final int Button2=0x7f090046;
         public static final int action_bar=0x7f090033;
         public static final int action_bar_activity_content=0x7f090003;
         public static final int action_bar_container=0x7f090032;
@@ -1677,6 +1675,7 @@ containing a value of this type.
         public static final int image=0x7f090025;
         public static final int listMode=0x7f09000a;
         public static final int list_item=0x7f090027;
+        public static final int loginB=0x7f090044;
         public static final int middle=0x7f09001d;
         public static final int never=0x7f090017;
         public static final int none=0x7f09000f;
@@ -1698,6 +1697,7 @@ containing a value of this type.
         public static final int showCustom=0x7f090010;
         public static final int showHome=0x7f090011;
         public static final int showTitle=0x7f090012;
+        public static final int signUpB=0x7f090046;
         public static final int split_action_bar=0x7f090004;
         public static final int submit_area=0x7f09003e;
         public static final int tabMode=0x7f09000c;
@@ -1825,11 +1825,11 @@ containing a value of this type.
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000d;
         public static final int action_settings=0x7f0a0011;
         public static final int app_name=0x7f0a000f;
-        public static final int cancel=0x7f0a0014;
         public static final int hello_world=0x7f0a0010;
         public static final int log_in=0x7f0a0013;
         public static final int name=0x7f0a0015;
         public static final int password=0x7f0a0017;
+        public static final int signUp=0x7f0a0014;
         public static final int title_activity_second=0x7f0a0012;
     }
     public static final class style {

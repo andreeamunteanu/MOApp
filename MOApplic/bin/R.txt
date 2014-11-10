@@ -335,8 +335,6 @@ int drawable abc_textfield_search_default_mtrl_alpha 0x7f020031
 int drawable abc_textfield_search_material 0x7f020032
 int drawable ic_launcher 0x7f020033
 int drawable seanecklace 0x7f020034
-int id Button1 0x7f090044
-int id Button2 0x7f090046
 int id action_bar 0x7f090033
 int id action_bar_activity_content 0x7f090003
 int id action_bar_container 0x7f090032
@@ -375,6 +373,7 @@ int id ifRoom 0x7f090016
 int id image 0x7f090025
 int id listMode 0x7f09000a
 int id list_item 0x7f090027
+int id loginB 0x7f090044
 int id middle 0x7f09001d
 int id never 0x7f090017
 int id none 0x7f09000f
@@ -396,6 +395,7 @@ int id shortcut 0x7f09002c
 int id showCustom 0x7f090010
 int id showHome 0x7f090011
 int id showTitle 0x7f090012
+int id signUpB 0x7f090046
 int id split_action_bar 0x7f090004
 int id submit_area 0x7f09003e
 int id tabMode 0x7f09000c
@@ -455,11 +455,11 @@ int string abc_shareactionprovider_share_with 0x7f0a000e
 int string abc_shareactionprovider_share_with_application 0x7f0a000d
 int string action_settings 0x7f0a0011
 int string app_name 0x7f0a000f
-int string cancel 0x7f0a0014
 int string hello_world 0x7f0a0010
 int string log_in 0x7f0a0013
 int string name 0x7f0a0015
 int string password 0x7f0a0017
+int string signUp 0x7f0a0014
 int string title_activity_second 0x7f0a0012
 int style AppBaseTheme 0x7f0b00eb
 int style AppTheme 0x7f0b00ec

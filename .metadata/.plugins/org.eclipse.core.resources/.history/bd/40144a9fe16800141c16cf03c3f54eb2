@@ -1,0 +1,113 @@
+package activities;
+
+import storage.Database;
+import storage.User;
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+
+import com.example.moapplic.R;
+
+public class MainActivity extends Activity {
+	EditText name;
+	EditText pass;
+	Button login;
+	Button signUp;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		Database database= new Database();
+		setContentView(R.layout.activity_main);
+		setViews();
+	}
+
+	public void setViews() {
+		name = (EditText) findViewById(R.id.editText1);
+		pass = (EditText) findViewById(R.id.editText2);
+		login = (Button) findViewById(R.id.loginB);
+		signUp = (Button) findViewById(R.id.signUpB);
+		login.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				for(User user : Database.getINSTANCE().getUsers())
+				{
+					if(user.getUsername().equals(name.getText().toString()))
+							if(user.getPassword().equals(pass.getText().toString()))
+							{
+								 Intent intent=new Intent (MainActivity.this,Second.class);
+								 startActivity (intent);
+							}
+				}
+
+			}
+		});
+		signUp.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+
+			}
+		});
+
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+
+	// @Override
+	// public void onClick(View w) {
+	// // TODO Auto-generated method stub
+	// String na=name.getText().toString();
+	// String pa=pass.getText().toString();
+	//
+	// switch (w.getId()){
+	// case R.id.loginB:
+	//
+	// if(na.length()>8 && pa.length()>8 && na.matches(".*\\d.*")
+	// &&pa.matches(".*\\d.*")){
+	// Intent i=new Intent (this,Second.class);
+	// startActivity (i);
+	// }
+	// else{
+	// Toast.makeText(getApplicationContext(), "Mai incearca!",
+	// Toast.LENGTH_LONG).show();
+	// }
+	//
+	// break;
+	//
+	// case R.id.signUpB:
+	// name.setText(" ");
+	// pass.setText(" ");
+	// break;
+	//
+	// default:
+	//
+	// break;
+	//
+	// }
+	// }
+	//
+}
