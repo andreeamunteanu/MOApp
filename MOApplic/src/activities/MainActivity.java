@@ -37,23 +37,34 @@ public class MainActivity extends Activity {
 		login.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				if (!Database.getINSTANCE().isEmpty())//if we have users in our database then we check if the username and password are correct
-					for (User user : Database.getINSTANCE().getUsers()) {
-						if (user.getUsername().equals(name.getText().toString()))
-							if (user.getPassword().equals(pass.getText().toString())) {
-								Intent intent = new Intent(MainActivity.this,
-										Second.class);
-								startActivity(intent);
-							}
-							else {
-								 Toast.makeText(getApplicationContext(), "Wrong username or password!",
-								 Toast.LENGTH_LONG).show();
-							}
+				if (!name.getText().toString().equals("")
+						&& !pass.getText().toString().equals(""))
+					if (!Database.getINSTANCE().isEmpty())// if we have users in
+															// our database then
+															// we check if the
+															// username and
+															// password are
+															// correct
+						for (User user : Database.getINSTANCE().getUsers()) {
+							if (user.getUsername().equals(
+									name.getText().toString()))
+								if (user.getPassword().equals(
+										pass.getText().toString())) {
+									Intent intent = new Intent(
+											MainActivity.this, Second.class);
+									intent.putExtra("id", user.getId()+"");
+									startActivity(intent);
+								} else {
+									Toast.makeText(getApplicationContext(),
+											"Wrong username or password!",
+											Toast.LENGTH_LONG).show();
+								}
+						}
+					else {
+						Toast.makeText(getApplicationContext(),
+								"There are no users signed up!",
+								Toast.LENGTH_LONG).show();
 					}
-				else {
-					 Toast.makeText(getApplicationContext(), "There are no users signed up!",
-					 Toast.LENGTH_LONG).show();
-				}
 
 			}
 		});
@@ -61,6 +72,9 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
+				Intent intent = new Intent(MainActivity.this,
+						SignUpActivity.class);
+				startActivity(intent);
 
 			}
 		});

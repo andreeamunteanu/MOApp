@@ -1,20 +1,42 @@
 package activities;
 
-import com.example.moapplic.R;
-
-import android.support.v7.app.ActionBarActivity;
+import storage.Database;
+import storage.User;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.TextView;
 
+import com.example.moapplic.R;
 
 public class Second extends ActionBarActivity {
+	TextView userNameTextView;
+	User currentUser;
+	Button nextButton;
 
-	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_second1);
-		
+		Intent myIntent = getIntent(); // gets the previously created intent
+		String userId = myIntent.getStringExtra("id");
+		int intUserId = Integer.parseInt(userId);
+		userNameTextView = (TextView) findViewById(R.id.user_name_text_view);
+		currentUser = Database.getINSTANCE().getUsers().get(intUserId);
+		userNameTextView.setText(currentUser.getUsername());
+		nextButton = (Button) findViewById(R.id.next_button);
+		nextButton.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(Second.this, MOAHomePage.class);
+				startActivity(intent);
+			}
+		});
 	}
 
 	@Override

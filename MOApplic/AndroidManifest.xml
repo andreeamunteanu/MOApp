@@ -26,6 +26,14 @@
             android:name="activities.Second"
             android:label="@string/title_activity_second" >
         </activity>
+        <activity
+            android:name="activities.SignUpActivity"
+            android:label="@string/title_activity_sign_up" >
+        </activity>
+        <activity
+            android:name="activities.MOAHomePage"
+            android:label="@string/title_activity_moahome_page" >
+        </activity>
     </application>
 
 </manifest>
