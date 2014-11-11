@@ -17,5 +17,11 @@
     <string name="your_account">Your Account</string>
     <string name="sign_up">Sign Up</string>
     <string name="description"> YOUR_DESCRIPTION_HERE </string>
-
+    <string name="title_activity_sign_up1">Sign_up1</string>
+    <string name="email">Email</string>
+    <string name="password1">Password</string>
+    <string name="password2">Retype password</string>
+    <string name="username">Username</string>
+    <string name="favouriteSite">Favorite</string>
+   
 </resources>

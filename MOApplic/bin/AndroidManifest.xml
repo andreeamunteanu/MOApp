@@ -34,6 +34,10 @@
             android:name="activities.MOAHomePage"
             android:label="@string/title_activity_moahome_page" >
         </activity>
+        <activity
+            android:name=".Sign_up1"
+            android:label="@string/title_activity_sign_up1" >
+        </activity>
     </application>
 
 </manifest>

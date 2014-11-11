@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		Database database = new Database();
+		new Database();
 		setContentView(R.layout.activity_main);
 		setViews();
 	}
