@@ -1,21 +1,48 @@
 package activities;
 
-import com.example.moapplic.R;
-import com.example.moapplic.R.id;
-import com.example.moapplic.R.layout;
-import com.example.moapplic.R.menu;
-
-import android.support.v7.app.ActionBarActivity;
+import storage.Database;
+import storage.User;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.example.moapplic.R;
 
 public class MOAHomePage extends ActionBarActivity {
-
+User currentUser;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_moahome_page);
+		Intent intent = getIntent();
+		String userId= intent.getStringExtra("id");
+		int intUserId= Integer.parseInt(userId);
+		currentUser=Database.getINSTANCE().getUsers().get(intUserId);
+		TextView textView =(TextView)findViewById(R.id.favouriteSite);
+		textView.setClickable(true);
+		textView.setMovementMethod(LinkMovementMethod.getInstance());
+		String text = "<a href='"+currentUser.getFavouriteSite()+"'> favourite site </a>";
+		textView.setText(Html.fromHtml(text));
+		
+		ImageView weatherImageView =(ImageView)findViewById(R.id.weather_image_view);
+		weatherImageView.setClickable(true);
+		weatherImageView.setOnClickListener(new View.OnClickListener(){
+		    public void onClick(View v){
+		        Intent intent = new Intent();
+		        intent.setAction(Intent.ACTION_VIEW);
+		        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+		        intent.setData(Uri.parse("http://www.vremea.ro"));
+		        startActivity(intent);
+		    }
+		});
 	}
 
 	@Override

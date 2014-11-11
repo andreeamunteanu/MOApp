@@ -34,8 +34,10 @@ public class Second extends ActionBarActivity {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(Second.this, MOAHomePage.class);
+				intent.putExtra("id", currentUser.getId()+"");
 				startActivity(intent);
 			}
+
 		});
 	}
 

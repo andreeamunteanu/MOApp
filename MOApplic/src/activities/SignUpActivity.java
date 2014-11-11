@@ -17,7 +17,7 @@ import com.example.moapplic.R;
 
 public class SignUpActivity extends ActionBarActivity {
 
-	EditText name, email, password1, password2;
+	EditText name, email, password1, password2,favouriteSite;
 	Button signUp, cancel;
 
 	@Override
@@ -28,6 +28,7 @@ public class SignUpActivity extends ActionBarActivity {
 		email = (EditText) findViewById(R.id.email_edit_text);
 		password1 = (EditText) findViewById(R.id.password_edit_text1);
 		password2 = (EditText) findViewById(R.id.password_edit_text2);
+		//favouriteSite= (EditText) findViewById(R.id.favourite_site_edit_text);
 		signUp = (Button) findViewById(R.id.sign_up_button);
 		cancel = (Button) findViewById(R.id.cancel_button);
 
@@ -39,11 +40,13 @@ public class SignUpActivity extends ActionBarActivity {
 				String emailString = email.getText().toString();
 				String password1String = password1.getText().toString();
 				String password2String = password2.getText().toString();
+//				String favouriteSiteString = favouriteSite.getText().toString();
 				if (!nameString.equals("") && !emailString.equals("")
 						&& !password1String.equals("")
-						&& password1String.equals(password2String)) {
+						&& password1String.equals(password2String)
+						) {
 					Database.getINSTANCE().add(
-							new User(nameString, password1String,emailString));
+							new User(nameString, emailString, password1String));
 					Intent intent = new Intent(SignUpActivity.this,
 							MainActivity.class);
 					startActivity(intent);
