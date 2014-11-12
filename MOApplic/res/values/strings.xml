@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    
     <string name="app_name">MOApplic</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -23,5 +23,5 @@
     <string name="password2">Retype password</string>
     <string name="username">Username</string>
     <string name="favouriteSite">Favorite</string>
-   
+ 
 </resources>

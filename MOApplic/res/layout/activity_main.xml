@@ -1,5 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/theme"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginLeft="0dp"
@@ -19,6 +20,8 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="34dp"
         android:text="@string/password"
+        android:textStyle="bold"
+	    android:textColor="#FFFFFF"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
@@ -29,6 +32,8 @@
         android:layout_alignLeft="@+id/editText1"
         android:layout_alignRight="@+id/editText1"
         android:ems="10"
+        android:textStyle="bold"
+	    android:textColor="#FFFFFF"
         android:inputType="textPassword" />
 
     <Button
@@ -39,6 +44,7 @@
         android:layout_alignBottom="@+id/loginB"
         android:layout_alignRight="@+id/editText2"
         android:layout_marginRight="24dp"
+        android:textStyle="bold"	
         android:text="@string/signUp"/>
 
     <Button
@@ -49,7 +55,8 @@
         android:layout_below="@+id/textView2"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="60dp"
-        android:text="@string/log_in" />
+        android:textStyle="bold"
+	    android:text="@string/log_in" />
 
     <EditText
         android:id="@+id/editText1"
@@ -59,6 +66,8 @@
         android:layout_marginLeft="14dp"
         android:layout_toRightOf="@+id/textView2"
         android:ems="10"
+        android:textStyle="bold"
+	    android:textColor="#FFFFFF"
         android:inputType="text" >
 
         <requestFocus />
@@ -72,6 +81,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="152dp"
         android:text="@string/name"
+        android:textStyle="bold"
+	    android:textColor="#FFFFFF"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>

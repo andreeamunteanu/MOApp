@@ -17,18 +17,18 @@ import com.example.moapplic.R;
 
 public class SignUpActivity extends ActionBarActivity {
 
-	EditText name, email, password1, password2,favouriteSite;
+	EditText name, email, password1, password2, favouriteSite;
 	Button signUp, cancel;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_sign_up);
-		name = (EditText) findViewById(R.id.name_editText);
-		email = (EditText) findViewById(R.id.email_editText);
-		password1 = (EditText) findViewById(R.id.password_editText1);
-		password2 = (EditText) findViewById(R.id.password_editText2);
-		favouriteSite= (EditText) findViewById(R.id.favouriteSite_editText);
+		name = (EditText) findViewById(R.id.name_edit_text);
+		email = (EditText) findViewById(R.id.email_edit_text);
+		password1 = (EditText) findViewById(R.id.password_edit_text1);
+		password2 = (EditText) findViewById(R.id.password_edit_text2);
+		favouriteSite = (EditText) findViewById(R.id.favourite_site_edit_text);
 		signUp = (Button) findViewById(R.id.sign_up_button);
 		cancel = (Button) findViewById(R.id.cancel_button);
 
@@ -41,20 +41,37 @@ public class SignUpActivity extends ActionBarActivity {
 				String password1String = password1.getText().toString();
 				String password2String = password2.getText().toString();
 				String favouriteSiteString = favouriteSite.getText().toString();
-				if (!nameString.equals("") && !emailString.equals("")
-						&& !password1String.equals("")
-						&& password1String.equals(password2String)
-						) {
-					Database.getINSTANCE().add(
-							new User(nameString, emailString, password1String));
-					Intent intent = new Intent(SignUpActivity.this,
-							MainActivity.class);
-					startActivity(intent);
-				}
-				else
-				{
-					 Toast.makeText(getApplicationContext(), "Please enter valid data!",
-					 Toast.LENGTH_LONG).show();
+				if (favouriteSiteString.equals("")) {
+					if (!nameString.equals("") && !emailString.equals("")
+							&& !password1String.equals("")
+							&& password1String.equals(password2String)) {
+						Database.getINSTANCE().add(
+								new User(nameString, password1String,
+										emailString));
+						Intent intent = new Intent(SignUpActivity.this,
+								MainActivity.class);
+						startActivity(intent);
+					} else {
+						Toast.makeText(getApplicationContext(),
+								"Please enter valid data!", Toast.LENGTH_LONG)
+								.show();
+					}
+				} else {
+					if (!nameString.equals("") && !emailString.equals("")
+							&& !password1String.equals("")
+							&& password1String.equals(password2String)) {
+						Database.getINSTANCE().add(
+								new User(nameString, password1String,
+										emailString, favouriteSiteString));
+						Intent intent = new Intent(SignUpActivity.this,
+								MainActivity.class);
+						startActivity(intent);
+					} else {
+						Toast.makeText(getApplicationContext(),
+								"Please enter valid data!", Toast.LENGTH_LONG)
+								.show();
+					}
+
 				}
 			}
 
@@ -83,8 +100,8 @@ public class SignUpActivity extends ActionBarActivity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will
-	//	 automatically handle clicks on the Home/Up button, so long
-	//	 as you specify a parent activity in AndroidManifest.xml.
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
 			return true;

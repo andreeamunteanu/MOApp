@@ -1,0 +1,95 @@
+package activities;
+
+import storage.Database;
+import storage.User;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.example.moapplic.R;
+
+public class SignUpActivity extends ActionBarActivity {
+
+	EditText name, email, password1, password2,favouriteSite;
+	Button signUp, cancel;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_sign_up);
+		name = (EditText) findViewById(R.id.name_edit_text);
+		email = (EditText) findViewById(R.id.email_edit_text);
+		password1 = (EditText) findViewById(R.id.password_edit_text1);
+		password2 = (EditText) findViewById(R.id.password_edit_text2);
+		favouriteSite= (EditText) findViewById(R.id.favourite_site_edit_text);
+		signUp = (Button) findViewById(R.id.sign_up_button);
+		cancel = (Button) findViewById(R.id.cancel_button);
+
+		signUp.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				String nameString = name.getText().toString();
+				String emailString = email.getText().toString();
+				String password1String = password1.getText().toString();
+				String password2String = password2.getText().toString();
+				String favouriteSiteString = favouriteSite.getText().toString();
+				if(favouriteSiteString.equals("")){
+				if (!nameString.equals("") && !emailString.equals("")
+						&& !password1String.equals("")
+						&& password1String.equals(password2String)
+						) {
+					Database.getINSTANCE().add(
+							new User(nameString, password1String,emailString));
+					Intent intent = new Intent(SignUpActivity.this,
+							MainActivity.class);
+					startActivity(intent);
+				}
+				else
+				{
+					 Toast.makeText(getApplicationContext(), "Please enter valid data!",
+					 Toast.LENGTH_LONG).show();
+				}
+			}else{}
+
+		});
+		cancel.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(SignUpActivity.this,
+						MainActivity.class);
+				startActivity(intent);
+
+			}
+
+		});
+
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.sign_up, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+	//	 automatically handle clicks on the Home/Up button, so long
+	//	 as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+}

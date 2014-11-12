@@ -1637,6 +1637,8 @@ containing a value of this type.
         public static final int ic_launcher=0x7f020034;
         public static final int seanecklace=0x7f020035;
         public static final int soarevesel=0x7f020036;
+        public static final int theme=0x7f020037;
+        public static final int theme2=0x7f020038;
     }
     public static final class id {
         public static final int action_bar=0x7f090033;
@@ -1652,12 +1654,12 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f090030;
         public static final int action_mode_bar_stub=0x7f09002f;
         public static final int action_mode_close_button=0x7f090022;
-        public static final int action_settings=0x7f090058;
+        public static final int action_settings=0x7f090059;
         public static final int activity_chooser_view_content=0x7f090023;
         public static final int always=0x7f090014;
         public static final int beginning=0x7f09001b;
         public static final int bottom=0x7f09001e;
-        public static final int cancel_button=0x7f090057;
+        public static final int cancel_button=0x7f090058;
         public static final int checkbox=0x7f09002b;
         public static final int collapseActionView=0x7f090015;
         public static final int decor_content_parent=0x7f090031;
@@ -1668,14 +1670,14 @@ containing a value of this type.
         public static final int editText1=0x7f090045;
         public static final int editText2=0x7f090043;
         public static final int edit_query=0x7f090035;
-        public static final int email_editText=0x7f090053;
-        public static final int email_textView=0x7f090052;
+        public static final int email_edit_text=0x7f090054;
+        public static final int email_textView=0x7f09004f;
         public static final int end=0x7f09001c;
         public static final int expand_activities_button=0x7f090024;
         public static final int expanded_menu=0x7f09002a;
         public static final int favouriteSite=0x7f090047;
-        public static final int favouriteSite_editText=0x7f090055;
-        public static final int favouriteSite_textView=0x7f090054;
+        public static final int favouriteSite_textView=0x7f090050;
+        public static final int favourite_site_edit_text=0x7f090055;
         public static final int home=0x7f090000;
         public static final int homeAsUp=0x7f09000e;
         public static final int icon=0x7f090028;
@@ -1685,16 +1687,16 @@ containing a value of this type.
         public static final int list_item=0x7f090027;
         public static final int loginB=0x7f090044;
         public static final int middle=0x7f09001d;
-        public static final int name_editText=0x7f09004d;
-        public static final int name_textView=0x7f09004c;
+        public static final int name_edit_text=0x7f090051;
+        public static final int name_text_view=0x7f090057;
         public static final int never=0x7f090017;
         public static final int next_button=0x7f09004b;
         public static final int none=0x7f09000f;
         public static final int normal=0x7f09000b;
-        public static final int password_editText1=0x7f09004f;
-        public static final int password_editText2=0x7f090051;
-        public static final int password_textView1=0x7f09004e;
-        public static final int password_textView2=0x7f090050;
+        public static final int pass2_TextView2=0x7f09004e;
+        public static final int password_edit_text1=0x7f090052;
+        public static final int password_edit_text2=0x7f090053;
+        public static final int password_textView1=0x7f09004d;
         public static final int progress_circular=0x7f090007;
         public static final int progress_horizontal=0x7f090008;
         public static final int radio=0x7f09002d;
@@ -1726,6 +1728,7 @@ containing a value of this type.
         public static final int user_name_text_view=0x7f09004a;
         public static final int weather_image_view=0x7f090048;
         public static final int welcome_text_view=0x7f090049;
+        public static final int widget0=0x7f09004c;
         public static final int withText=0x7f090018;
         public static final int wrap_content=0x7f090009;
     }
