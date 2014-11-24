@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    
+
     <string name="app_name">MOApplic</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -19,9 +19,12 @@
     <string name="description"> YOUR_DESCRIPTION_HERE </string>
     <string name="title_activity_sign_up1">Sign_up1</string>
     <string name="email">Email</string>
+    <string name="slide_show">Our gallery</string>
     <string name="password1">Password</string>
     <string name="password2">Retype password</string>
     <string name="username">Username</string>
     <string name="favouriteSite">Favorite</string>
- 
+    <string name="title_activity_slideshow">Sideshow</string>
+    <string name="title_activity_slide_show">MainActivity</string>
+
 </resources>

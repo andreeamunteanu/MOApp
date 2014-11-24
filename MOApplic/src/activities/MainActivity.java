@@ -20,6 +20,7 @@ public class MainActivity extends Activity {
 	EditText pass;
 	Button login;
 	Button signUp;
+	Button slideshow;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,8 @@ public class MainActivity extends Activity {
 		pass = (EditText) findViewById(R.id.editText2);
 		login = (Button) findViewById(R.id.loginB);
 		signUp = (Button) findViewById(R.id.signUpB);
+		slideshow= (Button) findViewById(R.id.slideshow);
+		
 		login.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {

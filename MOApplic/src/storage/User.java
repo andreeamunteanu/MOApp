@@ -1,7 +1,5 @@
 package storage;
 
-import java.util.ArrayList;
-
 public class User {
 	private static int idCounter=0;
 	

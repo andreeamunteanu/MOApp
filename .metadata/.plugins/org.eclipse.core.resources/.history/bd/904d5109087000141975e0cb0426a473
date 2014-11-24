@@ -1,0 +1,98 @@
+package com.example.slideshow;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+
+import android.app.Activity;
+import android.os.Handler;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+
+
+public class MainActivity extends Activity implements OnClickListener {
+private Button start;
+private EditText iteractions;
+private TextView time;
+private ImageView display;
+private long after,before;
+private int images[] = {R.drawable.image1,R.drawable.image2,R.drawable.image3,
+                        R.drawable.image4,R.drawable.image5,R.drawable.image6,R.drawable.image7,
+                        R.drawable.image8,R.drawable.image9,R.drawable.image10,R.drawable.image11,
+                        R.drawable.image12,R.drawable.image13,R.drawable.image14,R.drawable.image15,
+                        R.drawable.image16,R.drawable.image17,R.drawable.image18,R.drawable.image19,
+                        R.drawable.image20,R.drawable.image21,
+        };
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    // TODO Auto-generated method stub
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_image);
+    setUpUI();
+}
+
+private void setUpUI() {
+    // TODO Auto-generated method stub
+    start = (Button) findViewById(R.id.bntStartCalcolation);
+    iteractions = (EditText) findViewById(R.id.etIterations);
+    time = (TextView) findViewById(R.id.tvTime);
+
+    start.setOnClickListener(this);
+}
+
+@Override
+public void onClick(View arg0) {
+    //Creo le imageview in base al # di iteractions 
+    before = System.currentTimeMillis();
+    for (int j = 0; j < Integer.parseInt(iteractions.getText().toString());j++){
+        display = (ImageView) findViewById(R.id.ivDisplay);
+        display.setImageResource(images[j]);
+        Handler handler = new Handler(); 
+        handler.postDelayed(new Runnable() { 
+             public void run() { 
+                  display = null;
+                  System.gc();
+             } 
+        }, 1000); 
+
+    }
+    display = null;
+    System.gc();
+    after = System.currentTimeMillis();
+    time.setText(String.valueOf(after-before-1000* Integer.parseInt(iteractions.getText().toString())));
+}
+
+}
+
+public class MainActivity extends ActionBarActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+}

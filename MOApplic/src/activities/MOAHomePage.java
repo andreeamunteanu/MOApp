@@ -39,7 +39,7 @@ User currentUser;
 		        Intent intent = new Intent();
 		        intent.setAction(Intent.ACTION_VIEW);
 		        intent.addCategory(Intent.CATEGORY_BROWSABLE);
-		        intent.setData(Uri.parse("http://www.vremea.ro"));
+		        intent.setData(Uri.parse("http://www.moa.fr"));
 		        startActivity(intent);
 		    }
 		});

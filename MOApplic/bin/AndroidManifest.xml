@@ -38,6 +38,18 @@
             android:name=".Sign_up1"
             android:label="@string/title_activity_sign_up1" >
         </activity>
-    </application>
+        <activity
+            android:name="activities.Sideshow"
+            android:label="@string/title_activity_slideshow" >
+        </activity>
+        <activity
+            android:name=".Slidshow"
+            android:label="@string/title_activity_slideshow" >
+        </activity>
+        <activity
+            android:name="activities.SlideShowActivity"
+            android:label="@string/title_activity_slide_show" >
+        </activity>
+            </application>
 
 </manifest>

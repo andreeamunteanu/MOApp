@@ -3,4 +3,16 @@
 <fullyQualifiedTypeName name="android.widget.Toast"/>
 <fullyQualifiedTypeName name="android.view.Window"/>
 <fullyQualifiedTypeName name="android.view.WindowManager"/>
+<fullyQualifiedTypeName name="android.view.animation.AlphaAnimation"/>
+<fullyQualifiedTypeName name="android.view.animation.DecelerateInterpolator"/>
+<fullyQualifiedTypeName name="android.view.animation.AccelerateInterpolator"/>
+<fullyQualifiedTypeName name="android.view.animation.Animation"/>
+<fullyQualifiedTypeName name="android.view.animation.AnimationSet"/>
+<fullyQualifiedTypeName name="android.view.animation.Animation.AnimationListener"/>
+<fullyQualifiedTypeName name="android.os.Handler"/>
+<fullyQualifiedTypeName name="java.util.TimerTask"/>
+<fullyQualifiedTypeName name="java.util.Timer"/>
+<fullyQualifiedTypeName name="android.R"/>
+<fullyQualifiedTypeName name="com.example.moapplic.R.id"/>
+<fullyQualifiedTypeName name="android.support.v7.app.ActionBarActivity"/>
 </qualifiedTypeNameHistroy>
