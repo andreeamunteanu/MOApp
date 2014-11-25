@@ -1636,15 +1636,21 @@ containing a value of this type.
         public static final int download=0x7f020033;
         public static final int ic_launcher=0x7f020034;
         public static final int img1=0x7f020035;
-        public static final int img2=0x7f020036;
-        public static final int img3=0x7f020037;
-        public static final int img4=0x7f020038;
-        public static final int poza=0x7f020039;
-        public static final int pozaa=0x7f02003a;
-        public static final int seanecklace=0x7f02003b;
-        public static final int soarevesel=0x7f02003c;
-        public static final int theme=0x7f02003d;
-        public static final int theme2=0x7f02003e;
+        public static final int img10=0x7f020036;
+        public static final int img2=0x7f020037;
+        public static final int img3=0x7f020038;
+        public static final int img4=0x7f020039;
+        public static final int img5=0x7f02003a;
+        public static final int img6=0x7f02003b;
+        public static final int img7=0x7f02003c;
+        public static final int img8=0x7f02003d;
+        public static final int img9=0x7f02003e;
+        public static final int poza=0x7f02003f;
+        public static final int pozaa=0x7f020040;
+        public static final int seanecklace=0x7f020041;
+        public static final int soarevesel=0x7f020042;
+        public static final int theme=0x7f020043;
+        public static final int theme2=0x7f020044;
     }
     public static final class id {
         public static final int action_bar=0x7f090033;
@@ -1723,7 +1729,7 @@ containing a value of this type.
         public static final int showTitle=0x7f090012;
         public static final int signUpB=0x7f090046;
         public static final int sign_up_button=0x7f090057;
-        public static final int slideshow=0x7f090047;
+        public static final int slideShow=0x7f090047;
         public static final int split_action_bar=0x7f090004;
         public static final int submit_area=0x7f09003e;
         public static final int switcher=0x7f09005a;

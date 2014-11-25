@@ -11,6 +11,7 @@ import android.view.Window;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.Gallery;
 import android.widget.Gallery.LayoutParams;
 import android.widget.ImageSwitcher;
@@ -18,16 +19,17 @@ import android.widget.ImageView;
 import android.widget.ViewSwitcher;
 
 
-public class SlideShowActivity extends ActionBarActivity implements
+public class SlideShowActivity extends Activity implements
         AdapterView.OnItemSelectedListener, ViewSwitcher.ViewFactory {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+    	requestWindowFeature(0);
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.slide_show);
+       
+        
         mSwitcher = (ImageSwitcher) findViewById(R.id.switcher);
         mSwitcher.setFactory(this);
         mSwitcher.setInAnimation(AnimationUtils.loadAnimation(this,
@@ -41,7 +43,12 @@ public class SlideShowActivity extends ActionBarActivity implements
         g.setOnItemSelectedListener(this);
     }
 
-    public void onItemSelected(@SuppressWarnings("rawtypes") AdapterView parent, View v, int position, long id) {
+    private void requestFeature() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void onItemSelected(@SuppressWarnings("rawtypes") AdapterView parent, View v, int position, long id) {
         mSwitcher.setImageResource(mImageIds[position]);
     }
 
@@ -96,9 +103,12 @@ public class SlideShowActivity extends ActionBarActivity implements
     }
 
     private Integer[] mThumbIds = { R.drawable.img1, R.drawable.img2,
-           R.drawable.img3, R.drawable.img4 };
+           R.drawable.img3, R.drawable.img4, R.drawable.img5, R.drawable.img6,
+           R.drawable.img7, R.drawable.img8, R.drawable.img9, R.drawable.img10  };
 
-    private Integer[] mImageIds = { R.drawable.img1, R.drawable.img2, R.drawable.img3, R.drawable.img4 };
+    private Integer[] mImageIds = { R.drawable.img1, R.drawable.img2,
+            R.drawable.img3, R.drawable.img4, R.drawable.img5, R.drawable.img6,
+            R.drawable.img7, R.drawable.img8, R.drawable.img9, R.drawable.img10  };
 
 
 

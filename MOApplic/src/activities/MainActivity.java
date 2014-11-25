@@ -15,12 +15,12 @@ import android.widget.Toast;
 
 import com.example.moapplic.R;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements View.OnClickListener{
 	EditText name;
 	EditText pass;
 	Button login;
 	Button signUp;
-	Button slideshow;
+	Button slideShow;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -28,14 +28,21 @@ public class MainActivity extends Activity {
 		new Database();
 		setContentView(R.layout.activity_main);
 		setViews();
-	}
+		try{
+            slideShow.setEnabled(true);
 
+    }
+    catch(Exception ex) {
+    }
+    }
+	
+	
 	public void setViews() {
 		name = (EditText) findViewById(R.id.editText1);
 		pass = (EditText) findViewById(R.id.editText2);
 		login = (Button) findViewById(R.id.loginB);
 		signUp = (Button) findViewById(R.id.signUpB);
-		slideshow= (Button) findViewById(R.id.slideshow);
+		slideShow= (Button) findViewById(R.id.slideShow);
 		
 		login.setOnClickListener(new OnClickListener() {
 			@Override
@@ -80,9 +87,22 @@ public class MainActivity extends Activity {
 				startActivity(intent);
 
 			}
-		});
+					});
+		slideShow.setOnClickListener(new OnClickListener() {
 
+			@Override
+			public void onClick(View v) {
+	
+				     Intent i = new Intent(MainActivity.this,
+				    		 SlideShowActivity.class);
+				     startActivity(i);
+				     }
+				
+					});
 	}
+		
+		
+
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -101,6 +121,12 @@ public class MainActivity extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	// @Override

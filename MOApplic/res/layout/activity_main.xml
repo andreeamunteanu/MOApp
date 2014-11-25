@@ -86,11 +86,11 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Button
-        android:id="@+id/slideshow"
+        android:id="@+id/slideShow"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/signUpB"
-        android:layout_marginLeft="52dp"
+        android:layout_marginLeft="54dp"
         android:textStyle="bold"
         android:layout_marginTop="24dp"
         android:text="@string/slide_show" />

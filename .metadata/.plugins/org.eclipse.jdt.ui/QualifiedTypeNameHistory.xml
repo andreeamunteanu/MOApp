@@ -15,4 +15,5 @@
 <fullyQualifiedTypeName name="android.R"/>
 <fullyQualifiedTypeName name="com.example.moapplic.R.id"/>
 <fullyQualifiedTypeName name="android.support.v7.app.ActionBarActivity"/>
+<fullyQualifiedTypeName name="android.widget.Button"/>
 </qualifiedTypeNameHistroy>
